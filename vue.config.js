@@ -1,4 +1,4 @@
-/* const path = require('path')
+const path = require('path')
 
 module.exports = {
   "transpileDependencies": [
@@ -6,7 +6,4 @@ module.exports = {
   ],
   publicPath: '/POGO'
 
-};*/
-module.exports = {
-    publicPath: '/POGO/start'
-}
+};
