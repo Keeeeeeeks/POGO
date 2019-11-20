@@ -6,14 +6,14 @@
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
-    <v-img
+      <router-link :to="{name: 'start'}"><v-img
       :src="require('./assets/Component 2.png')"
       contain
       width="200"
       height="50"
       max-width="500"
       max-height="300"
-    ></v-img>
+    ></v-img></router-link>
     </v-app-bar>
 
     <v-content>
