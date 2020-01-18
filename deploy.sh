@@ -4,7 +4,7 @@
 set -e
 
 # build
-npm run build
+sudo npm run build
 
 # navigate into the build output directory
 cd dist
