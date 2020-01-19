@@ -1,50 +1,60 @@
 <template>
-  <v-app id="inspire">
+  <v-app>
     <v-app-bar
-      absolute
-      color="white"
-      elevate-on-scroll
-      scroll-target="#scrolling-techniques-7"
+      app
+      color="primary"
+      dark
     >
-      <router-link :to="{name: 'start'}"><v-img
-      :src="require('./assets/Component 2.png')"
-      contain
-      width="200"
-      height="50"
-      max-width="500"
-      max-height="300"
-    ></v-img></router-link>
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
     </v-app-bar>
 
     <v-content>
-      <v-container
-        class="fill-height"
-        fluid
-      >
-        <router-view/>
-      </v-container>
+      <HelloWorld/>
     </v-content>
-    <v-footer
-      color="white"
-      app
-    >
-      <span class="white--text">&copy; 2019</span>
-    </v-footer>
   </v-app>
 </template>
 
 <script>
-  export default {
-    props: {
-      source: String,
-    },
+import HelloWorld from './components/HelloWorld';
 
-    data: () => ({
-    }),
-  }
+export default {
+  name: 'App',
+
+  components: {
+    HelloWorld,
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-.v-app-bar {
-    box-shadow: none;
-}</style>
