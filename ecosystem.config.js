@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name        : "vue-cli-service",
-    script      : "./node_modules/@vue/cli-service/bin/vue-cli-service.js"
+    script      : "./node_modules/@vue/cli-service/bin/vue-cli-service.js",
     watch       : true,
     instances   : 5,
     exec_mode   : "cluster",
